@@ -15,8 +15,7 @@ class people::karl_wednesday {
   include ea_origin
 
   # requires projects
-  #include projects::saturdaygroup
-  #include projects::wednesdayagency
+  include projects::swarovskigroup
 
   $home     = "/Users/${::boxen_user}"
   $my       = "${home}/my"

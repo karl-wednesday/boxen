@@ -37,5 +37,6 @@ github "xquartz", "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
-#github "chrome", "1.1.0"
 #github "osx", "1.6.0"
+github "mysql", "1.1.0"
+github "wkhtmltopdf", "0.1.1"

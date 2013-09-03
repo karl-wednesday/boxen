@@ -1,14 +1,8 @@
 class projects::saturdaygroup {
-  include icu4c
-  include phantomjs
 
   boxen::project { 'saturdaygroup':
-    dotenv        => true,
-    elasticsearch => true,
+    dir           => "${boxen::config::srcdir}/saturday-group.com/deploy",
     mysql         => true,
-    nginx         => true,
-    redis         => true,
-    ruby          => '1.9.3',
-    source        => 'boxen/saturdaygroup'
+    source        => 'wednesdaylondon/saturday-group.com'
   }
 }
