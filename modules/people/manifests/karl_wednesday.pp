@@ -1,21 +1,17 @@
 class people::karl_wednesday {
   # notify { 'Hello Karl': }
 
-  # requires modules in Puppetfile
-  #include chrome
-
   # requires classes
   include boxen::development
 
-  #include emacs   # requires emacs module in Puppetfile
-  #include sparrow # requires sparrow module in Puppetfile
-
-  # you should be busy with work dammit
-  #include steam
+  # requires modules in Puppetfile
+  include bbedit
   include ea_origin
+  include steam
 
   # requires projects
   include projects::swarovskigroup
+  #include projects::jbrandjeans
 
   $home     = "/Users/${::boxen_user}"
   $my       = "${home}/my"
@@ -30,10 +26,10 @@ class people::karl_wednesday {
 #    require => File[$my]
 #  }
 
-#  get::config::global {
-#    'user.name': value => 'Karl Podger';
-#    'user.email': value => 'karl@wednesdayagency.com';
-#  }
+  git::config::global {
+    'user.name': value => 'Karl Podger';
+    'user.email': value => 'karl@wednesdayagency.com';
+  }
 
 #  osx_defaults { "require pass at screensaver":
 #    ensure => present,

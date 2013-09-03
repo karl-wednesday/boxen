@@ -3,11 +3,11 @@ class wednesday::packages::mac {
   include automake
   include foreman
   include heroku
-  # include imagemagick
+  include imagemagick
   include imageoptim
   include libpng
   include mongodb
-  # include mysql
+  include mysql
   # include nginx
   # include nvm
   include phantomjs
@@ -17,7 +17,7 @@ class wednesday::packages::mac {
   # include screenhero
   # include statsd
   include wget
-  include wkhtmltopdf
+  #include wkhtmltopdf
   # include zeromq
 
   # class { 'nodejs::global':

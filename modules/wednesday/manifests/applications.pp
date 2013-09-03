@@ -1,7 +1,6 @@
 class wednesday::applications::mac {
   include alfred
   include arq
-  # include bbedit
   include brow
   include btsync
   include caffeine
@@ -15,23 +14,21 @@ class wednesday::applications::mac {
   include flux
   include googledrive
   include googleearth
-  include google_notifier
   include handbrake
   include harvest
-  # include iterm2
+  include iterm2::stable
   include induction
   include opera
-  # include osx
   include tower
   include transmit
-  # include screenhero
+  include screenhero
   include sequel_pro
-  # include spectacle
+  include spectacle
   include skitch
   include skype
   include spotify
   include sublime_text_2
-  # include textwrangler
+  include textwrangler
   include vagrant
   include virtualbox
   include vlc
