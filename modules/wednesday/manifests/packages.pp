@@ -1,4 +1,5 @@
 class wednesday::packages::mac {
+  include pkgconfig
   include autoconf
   include automake
   include foreman
@@ -47,5 +48,17 @@ class wednesday::packages::mac {
   nodejs::module { 'yo':
     node_version => 'v0.8'
   }
-  
+ 
+  # ruby::gem { 'bundler for 1.9.3-p448':
+  #   gem     => 'bundler',
+  #   ruby    => '1.9.3-p448',
+  #   version => '~> 1.3.5'
+  # }
+
+  ruby::gem { 'sass for 1.9.3-p448':
+    gem     => 'sass',
+    ruby    => '1.9.3-p448',
+    version => '~> 3.2.10'
+  }
+
 }
