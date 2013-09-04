@@ -13,29 +13,24 @@ class people::karl_wednesday {
   include projects::swarovskigroup
   #include projects::jbrandjeans
 
-  $home     = "/Users/${::boxen_user}"
-  $my       = "${home}/my"
-  $dotfiles = "${my}/dotfiles"
-#  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
- 
-  file { $my:
-    ensure  => directory
+  $home = "/Users/${::boxen_user}"
+  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
+
+  repository { $dotfiles_dir:
+    source => "${::github_user}/dotfiles"
   }
 
-  repository { $dotfiles:
-    source  => 'karl_wednesday/dotfiles',
-    require => File[$my]
+  file { "${home}/.test":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.test",
+    require => Repository[$dotfiles_dir]
   }
 
-#  repository { $dotfiles_dir:
-#    source => "${::github_user}/dotfiles"
-#  }
-
-#  file { "${home}/.temp":
-#    ensure  => link,
-#    target  => "${dotfiles_dir}/.temp",
-#    require => Repository[$dotfiles_dir]
-#  }
+  file { "${home}/.ssh/config":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.ssh/config",
+    require => Repository[$dotfiles_dir]
+  }
 
   git::config::global {
     'user.name': value => 'Karl Podger';
