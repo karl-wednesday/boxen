@@ -15,16 +15,28 @@ class people::karl_wednesday {
 
   $home     = "/Users/${::boxen_user}"
   $my       = "${home}/my"
-  $dotfiles = "${my}/dotfiles"
+#  $dotfiles = "${my}/dotfiles"
+  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
+
   
-#  file { $my:
-#    ensure  => directory
-#  }
+  file { $my:
+    ensure  => directory
+  }
 
 #  repository { $dotfiles:
 #    source  => 'karl_wednesday/dotfiles',
 #    require => File[$my]
 #  }
+
+  repository { $dotfiles_dir:
+    source => "${::github_user}/dotfiles"
+  }
+
+  file { "${home}/.temp":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.temp",
+    require => Repository[$dotfiles_dir]
+  }
 
   git::config::global {
     'user.name': value => 'Karl Podger';
