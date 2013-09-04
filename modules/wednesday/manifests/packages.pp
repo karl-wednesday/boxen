@@ -15,7 +15,6 @@ class wednesday::packages::mac {
   # include php
   # include python
   # include redis
-  # include screenhero
   # include statsd
   include wget
   #include wkhtmltopdf
