@@ -13,22 +13,28 @@ class people::karl_wednesday {
   include projects::swarovskigroup
   #include projects::jbrandjeans
 
-  $home = "/Users/${::boxen_user}"
+  $home     = "/Users/${::boxen_user}"
+  $my       = "${home}/my"
+#  $dotfiles = "${my}/dotfiles"
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
+
+  
+  file { $my:
+    ensure  => directory
+  }
+
+#  repository { $dotfiles:
+#    source  => 'karl_wednesday/dotfiles',
+#    require => File[$my]
+#  }
 
   repository { $dotfiles_dir:
     source => "${::github_user}/dotfiles"
   }
 
-  file { "${home}/.test":
+  file { "${home}/.temp":
     ensure  => link,
-    target  => "${dotfiles_dir}/.test",
-    require => Repository[$dotfiles_dir]
-  }
-
-  file { "${home}/.ssh/config":
-    ensure  => link,
-    target  => "${dotfiles_dir}/.ssh/config",
+    target  => "${dotfiles_dir}/.temp",
     require => Repository[$dotfiles_dir]
   }
 
