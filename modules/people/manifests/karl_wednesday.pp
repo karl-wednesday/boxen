@@ -38,6 +38,12 @@ class people::karl_wednesday {
     require => Repository[$dotfiles_dir]
   }
 
+  file { "${home}/.ssh/config":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.ssh/config",
+    require => Repository[$dotfiles_dir]
+  }
+
   git::config::global {
     'user.name': value => 'Karl Podger';
     'user.email': value => 'karl@wednesdayagency.com';
