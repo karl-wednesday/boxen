@@ -1,32 +1,22 @@
-class people::karl_wednesday {
-  # notify { 'Hello Karl': }
-
+class people::terrence_wednesday {
   # requires classes
   include boxen::development
 
   # requires modules in Puppetfile
-  include bbedit
   include ea_origin
   include steam
 
   # requires projects
   include projects::swarovskigroup
-  #include projects::jbrandjeans
+  include projects::jbrandjeans
 
   $home     = "/Users/${::boxen_user}"
   $my       = "${home}/my"
-#  $dotfiles = "${my}/dotfiles"
   $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
-
   
   file { $my:
     ensure  => directory
   }
-
-#  repository { $dotfiles:
-#    source  => 'karl_wednesday/dotfiles',
-#    require => File[$my]
-#  }
 
   repository { $dotfiles_dir:
     source => "${::github_user}/dotfiles"
@@ -46,7 +36,7 @@ class people::karl_wednesday {
 
   git::config::global {
     'user.name': value => 'Karl Podger';
-    'user.email': value => 'karl@wednesdayagency.com';
+    'user.email': value => 'terrence@wednesdayagency.com';
   }
 
 #  osx_defaults { "require pass at screensaver":
