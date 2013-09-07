@@ -20,6 +20,10 @@ class wednesday::packages::mac {
   #include wkhtmltopdf
   # include zeromq
 
+  package { 'casperjs':
+    install_options => ['--devel']
+  }
+
   # class { 'nodejs::global':
   #   version => 'v0.10.5'
   # }
