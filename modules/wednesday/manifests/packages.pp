@@ -42,19 +42,19 @@ class wednesday::packages::mac {
   }
 
   nodejs::module { 'jshint':
-    node_version => 'v0.8'
+    node_version => 'v0.10'
   }
 
   nodejs::module { 'bower':
-    node_version => 'v0.8'
+    node_version => 'v0.10'
   }
 
   nodejs::module { 'grunt-cli':
-    node_version => 'v0.8'
+    node_version => 'v0.10'
   }
 
   nodejs::module { 'yo':
-    node_version => 'v0.8'
+    node_version => 'v0.10'
   }
  
   # ruby::gem { 'bundler for 1.9.3-p448':
