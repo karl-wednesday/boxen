@@ -1,7 +1,7 @@
 class wednesday::dotfiles::mac {
   $home     = "/Users/${::boxen_user}"
   $my       = "${home}/my"
-  $dotfiles_dir = "${boxen::config::srcdir}/boxen/repo/dotfiles"
+  $dotfiles_dir = "${boxen::config::srcdir}/our-boxen/dotfiles"
   
   file { $my:
     ensure  => directory
