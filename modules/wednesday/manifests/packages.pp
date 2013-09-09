@@ -15,10 +15,15 @@ class wednesday::packages::mac {
   # include php
   # include python
   # include redis
+  include ruby
   # include statsd
   include wget
   #include wkhtmltopdf
   # include zeromq
+
+  class { 'ruby::global':
+    version => '1.9.3'
+  }
 
   package { 'casperjs':
     install_options => ['--devel']
@@ -33,7 +38,7 @@ class wednesday::packages::mac {
   }
 
   nodejs::module { 'less':
-    node_version => 'v0.8'
+    node_version => 'v0.10'
   }
 
   nodejs::module { 'jshint':
