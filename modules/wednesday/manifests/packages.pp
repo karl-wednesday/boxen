@@ -69,4 +69,10 @@ class wednesday::packages::mac {
     version => '~> 3.2.10'
   }
 
+  ruby::gem { 'compass for 1.9.3-p448':
+    gem     => 'sass',
+    ruby    => '1.9.3-p448',
+    version => '~> 0.12.2'
+  }
+
 }
