@@ -7,6 +7,7 @@ class wednesday::applications::mac {
   include ccleaner
   include charles
   include chrome
+  include colloquy
   include cyberduck
   include dropbox
   include evernote

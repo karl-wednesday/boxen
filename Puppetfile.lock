@@ -59,6 +59,11 @@ GITHUBTARBALL
     chrome (1.1.0)
 
 GITHUBTARBALL
+  remote: boxen/puppet-colloquy
+  specs:
+    colloquy (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-cyberduck
   specs:
     cyberduck (1.0.1)
@@ -371,6 +376,7 @@ DEPENDENCIES
   ccleaner (= 1.0.2)
   charles (= 1.0.2)
   chrome (= 1.1.0)
+  colloquy (= 1.0.0)
   cyberduck (= 1.0.1)
   dnsmasq (= 1.0.0)
   dropbox (= 1.1.0)
