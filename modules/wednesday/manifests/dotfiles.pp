@@ -1,11 +1,6 @@
 class wednesday::dotfiles::mac {
-  $home     = "/Users/${::boxen_user}"
-  $my       = "${home}/my"
-  $dotfiles_dir = "${boxen::config::srcdir}/our-boxen/dotfiles"
-  
-  file { $my:
-    ensure  => directory
-  }
+  $home = "/Users/${::boxen_user}"
+  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
 
   repository { $dotfiles_dir:
     source => "${::github_user}/dotfiles"
