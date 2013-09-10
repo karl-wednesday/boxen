@@ -12,8 +12,23 @@ class people::terrence_wednesday {
   include projects::swarovskigroup
   include projects::jbrandjeans
 
+  # configure dotfiles
+  $home     = "/Users/${::boxen_user}"
+  $my       = "${home}/my"
+  $dotfiles = "${my}/dotfiles"
+
+  file { $my:
+    ensure  => directory
+  }
+
+  repository { $dotfiles:
+    source  => 'jbarnette/dotfiles',
+    require => File[$my]
+  }
+
+  # configure Git
   git::config::global {
-    'user.name': value => 'Karl Podger';
+    'user.name': value => 'Terrence Cua';
     'user.email': value => 'terrence@wednesdayagency.com';
   }
 
