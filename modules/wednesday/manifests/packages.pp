@@ -37,6 +37,14 @@ class wednesday::packages::mac {
     version => 'v0.10'
   }
 
+  nodejs::module { 'bower':
+    node_version => 'v0.10'
+  }
+
+  nodejs::module { 'grunt-cli':
+    node_version => 'v0.10'
+  }
+
   nodejs::module { 'less':
     node_version => 'v0.10'
   }
@@ -45,11 +53,7 @@ class wednesday::packages::mac {
     node_version => 'v0.10'
   }
 
-  nodejs::module { 'bower':
-    node_version => 'v0.10'
-  }
-
-  nodejs::module { 'grunt-cli':
+  nodejs::module { 'recess':
     node_version => 'v0.10'
   }
 
