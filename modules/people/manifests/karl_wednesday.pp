@@ -12,6 +12,7 @@ class people::karl_wednesday {
   # requires projects
   include projects::swarovskigroup
   include projects::jbrandjeans
+  include projects::lindex
 
   # configure dotfiles
   $home     = "/Users/${::boxen_user}"
