@@ -1,4 +1,4 @@
-class people::karl_wednesday {
+class people::nhekkens {
   # notify { 'Hello Karl': }
 
   # requires classes
@@ -32,8 +32,8 @@ class people::karl_wednesday {
 
   # configure Git
   git::config::global {
-    'user.name': value => 'Karl Podger';
-    'user.email': value => 'karl@wednesdayagency.com';
+    'user.name': value => 'Nicolay Hekkens';
+    'user.email': value => 'nicolay@wednesdayagency.com';
   }
 
 #  osx_defaults { "require pass at screensaver":
