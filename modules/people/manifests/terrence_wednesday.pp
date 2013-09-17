@@ -22,7 +22,7 @@ class people::terrence_wednesday {
   }
 
   repository { $dotfiles:
-    source  => '{my}/dotfiles',
+    source  => '${my}/dotfiles',
     require => File[$my]
   }
 
