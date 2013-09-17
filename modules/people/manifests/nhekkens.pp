@@ -5,8 +5,8 @@ class people::nhekkens {
   include boxen::development
 
   # requires modules in Puppetfile
-  include bbedit
-  include forklift
+  #include bbedit
+  #include forklift
   include ea_origin
   include steam
   #include utorrent
