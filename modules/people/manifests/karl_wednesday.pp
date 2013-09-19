@@ -6,15 +6,16 @@ class people::karl_wednesday {
 
   # requires modules in Puppetfile
   include bbedit
-  include forklift
   include ea_origin
+  include forklift
   include steam
   #include utorrent
 
   # requires projects
-  include projects::swarovskigroup
+  include projects::elder-statesman
   include projects::jbrandjeans
   include projects::lindex
+  include projects::swarovskigroup
 
   # configure dotfiles
   $home     = "/Users/${::boxen_user}"
