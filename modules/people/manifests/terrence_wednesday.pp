@@ -5,25 +5,30 @@ class people::terrence_wednesday {
   include boxen::development
 
   # requires modules in Puppetfile
+  #include bbedit
   include ea_origin
+  #include forklift
   include steam
+  #include utorrent
 
   # requires projects
+  #include projects::elder-statesman
   include projects::swarovskigroup
   include projects::jbrandjeans
+  #include projects::lindex
 
   # configure dotfiles
   $home     = "/Users/${::boxen_user}"
-  $my       = "${home}/my"
-  $dotfiles = "${my}/dotfiles"
-
-  file { $my:
-    ensure  => directory
+  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
+  
+  repository { $dotfiles_dir:
+    source => "${::github_login}/dotfiles"
   }
 
-  repository { $dotfiles:
-    source  => '${my}/dotfiles',
-    require => File[$my]
+  file { "${home}/.profile":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.profile",
+    require => Repository[$dotfiles_dir]
   }
 
   # configure Git

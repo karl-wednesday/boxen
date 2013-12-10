@@ -12,23 +12,24 @@ class people::karl_wednesday {
   #include utorrent
 
   # requires projects
-  include projects::elder-statesman
+  include projects::wednesday-sample
+  #include projects::elder-statesman
   include projects::jbrandjeans
-  include projects::lindex
+  #include projects::lindex
   include projects::swarovskigroup
 
   # configure dotfiles
   $home     = "/Users/${::boxen_user}"
-  $my       = "${home}/my"
-  $dotfiles = "${my}/dotfiles"
-
-  file { $my:
-    ensure  => directory
+  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
+  
+  repository { $dotfiles_dir:
+    source => "${::github_login}/dotfiles"
   }
 
-  repository { $dotfiles:
-    source  => '${my}/dotfiles',
-    require => File[$my]
+  file { "${home}/.profile":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.profile",
+    require => Repository[$dotfiles_dir]
   }
 
   # configure Git
