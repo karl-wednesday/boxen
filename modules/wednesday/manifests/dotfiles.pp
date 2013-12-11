@@ -14,6 +14,12 @@ class wednesday::dotfiles::mac {
     require => Repository[$dotfiles_dir]
   }
 
+  file { "${home}/.bashrc":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.bashrc",
+    require => Repository[$dotfiles_dir]
+  }
+
   file { "${home}/.ssh/config":
     ensure  => link,
     target  => "${dotfiles_dir}/.ssh/config",
