@@ -1,4 +1,9 @@
 GITHUBTARBALL
+  remote: MoOx/puppet-ntfs_3g
+  specs:
+    ntfs_3g (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-alfred
   specs:
     alfred (1.1.2)
@@ -151,7 +156,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-imagemagick
   specs:
-    imagemagick (1.2.0)
+    imagemagick (1.2.1)
 
 GITHUBTARBALL
   remote: boxen/puppet-imageoptim
@@ -217,6 +222,11 @@ GITHUBTARBALL
   remote: boxen/puppet-osx
   specs:
     osx (1.6.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-osxfuse
+  specs:
+    osxfuse (1.1.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-pcre
@@ -324,9 +334,19 @@ GITHUBTARBALL
     transmit (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-upshot
+  specs:
+    upshot (1.0.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-vagrant
   specs:
     vagrant (3.0.1)
+
+GITHUBTARBALL
+  remote: boxen/puppet-vim
+  specs:
+    vim (1.0.5)
 
 GITHUBTARBALL
   remote: boxen/puppet-virtualbox
@@ -405,7 +425,7 @@ DEPENDENCIES
   heroku (= 2.0.0)
   homebrew (= 1.4.1)
   hub (= 1.0.3)
-  imagemagick (= 1.2.0)
+  imagemagick (= 1.2.1)
   imageoptim (= 0.0.2)
   induction (= 1.0.0)
   inifile (= 1.0.0)
@@ -416,11 +436,12 @@ DEPENDENCIES
   mysql (= 1.1.0)
   nginx (= 1.4.2)
   nodejs (= 3.2.9)
+  ntfs_3g (= 1.0.0)
   nvm (= 1.0.0)
   openssl (= 1.0.0)
   opera (= 0.2.0)
   osx (= 1.6.0)
-  osx (= 1.6.0)
+  osxfuse (= 1.1.0)
   pcre (= 1.0.0)
   phantomjs (= 2.0.2)
   php (= 1.1.0)
@@ -443,8 +464,10 @@ DEPENDENCIES
   textwrangler (= 1.0.2)
   tower (= 1.0.0)
   transmit (= 1.0.1)
+  upshot (= 1.0.0)
   utorrent (= 1.0.0)
   vagrant (= 3.0.1)
+  vim (= 1.0.5)
   virtualbox (= 1.0.9)
   vlc (= 1.0.4)
   wget (= 1.0.0)

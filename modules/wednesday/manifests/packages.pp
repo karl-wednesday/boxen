@@ -4,7 +4,7 @@ class wednesday::packages::mac {
   include automake
   include foreman
   include heroku
-  include imagemagick
+  #include imagemagick
   include imageoptim
   include libpng
   include mongodb

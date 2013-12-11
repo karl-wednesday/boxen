@@ -30,9 +30,21 @@ class wednesday::applications::mac {
   include spotify
   include sublime_text_2
   include textwrangler
+  include upshot
   include vagrant
+  #include vim
   include virtualbox
   include vlc
+
+  #class {'charles::license':
+  #  license_name => 'Your name',
+  #  license_key  => '7ad6c7a6c87...',
+  #}
+
+  #vim::bundle { [
+  #  'scrooloose/syntastic',
+  #  'sjl/gundo.vim'
+  #]: }
 
   # sublime_text_2::package { 'JSLint':
   #   source => 'darrenderidder/Sublime-JSLint'

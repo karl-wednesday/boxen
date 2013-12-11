@@ -1,5 +1,5 @@
 class people::karl_wednesday {
-  # notify { 'Hello Karl': }
+  notify { 'Hello Karl': }
 
   # requires classes
   include boxen::development
@@ -17,20 +17,6 @@ class people::karl_wednesday {
   include projects::jbrandjeans
   #include projects::lindex
   include projects::swarovskigroup
-
-  # configure dotfiles
-  $home     = "/Users/${::boxen_user}"
-  $dotfiles_dir = "${boxen::config::srcdir}/dotfiles"
-  
-  repository { $dotfiles_dir:
-    source => "${::github_login}/dotfiles"
-  }
-
-  file { "${home}/.profile":
-    ensure  => link,
-    target  => "${dotfiles_dir}/.profile",
-    require => Repository[$dotfiles_dir]
-  }
 
   # configure Git
   git::config::global {
