@@ -1,5 +1,5 @@
 class people::terrence_wednesday {
-  notify { 'Hello Terrence': }
+  #notify { 'Hello Terrence': }
 
   # requires classes
   include boxen::development

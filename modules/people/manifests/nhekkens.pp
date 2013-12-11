@@ -1,5 +1,5 @@
 class people::nhekkens {
-  notify { 'Hello Nicolay': }
+  #notify { 'Hello Nicolay': }
 
   # requires classes
   include boxen::development
