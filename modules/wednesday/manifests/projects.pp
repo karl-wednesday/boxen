@@ -1,4 +1,4 @@
 class wednesday::projects {
-  include projects::saturdaygroup
-  include projects::wednesdayagency
+  #include projects::saturdaygroup
+  #include projects::wednesdayagency
 }
