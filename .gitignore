@@ -13,5 +13,3 @@
 
 #Added by Wednesday on 2013-09-02
 /vendor/puppet/cache/
-
-*.lock
