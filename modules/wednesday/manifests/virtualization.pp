@@ -12,9 +12,13 @@ class wednesday::virtualization::mac {
     source => 'wednesdaylondon/vagrant'
   }
 
-	exec { "VirtualBox_reset":
-		command => "VirtualBox restart",
-		path    => "/Library/StartupItems/VirtualBox/",
-		user    => root
-	}
+	#exec { "VirtualBox_reset":
+	#	command => "VirtualBox restart",
+	#	path    => "/Library/StartupItems/VirtualBox/",
+	#	user    => root
+	#}
+
+  host { 'vagrant':
+    ip => '192.168.56.101'
+  }
 }
