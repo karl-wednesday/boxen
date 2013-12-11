@@ -5,4 +5,9 @@ class projects::elder-statesman {
     mysql         => true,
     source        => 'wednesdaylondon/elder-statesman.com'
   }
+
+  host { 'elder-statesman.com.host':
+    ip => '192.168.56.101',
+    host_aliases => 'www.elder-statesman.com.host',
+  }
 }

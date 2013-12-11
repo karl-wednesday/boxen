@@ -5,4 +5,9 @@ class projects::saturdaygroup {
     mysql         => true,
     source        => 'wednesdaylondon/saturday-group.com'
   }
+
+  host { 'saturday-group.com.host':
+    ip => '192.168.56.101',
+    host_aliases => 'www.saturday-group.com.host',
+  }
 }

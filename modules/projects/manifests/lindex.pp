@@ -5,4 +5,9 @@ class projects::lindex {
     mysql         => true,
     source        => 'wednesdaylondon/lindex.com'
   }
+
+  host { 'lindex.com.host':
+    ip => '192.168.56.101',
+    host_aliases => 'www.lindex.com.host',
+  }
 }

@@ -5,4 +5,9 @@ class projects::swarovskigroup {
     mysql         => true,
     source        => 'wednesdaylondon/swarovskigroup.com'
   }
+
+  host { 'swarovskigroup.com.host':
+    ip => '192.168.56.101',
+    host_aliases => 'www.swarovskigroup.com.host',
+  }
 }

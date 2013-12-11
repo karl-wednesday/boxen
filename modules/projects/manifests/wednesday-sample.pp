@@ -8,6 +8,11 @@ class projects::wednesday-sample {
     source        => 'karl-wednesday/wednesday-sample'
   }
 
+  host { 'wednesday-sample.host':
+    ip => '192.168.56.101',
+    host_aliases => 'wednesday-sample.host',
+  }
+
   file { "${project_dir}/dbv/config.php":
     ensure  => link,
     target  => "${project_dir}/config/dbv/config.php",

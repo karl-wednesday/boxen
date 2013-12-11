@@ -15,4 +15,9 @@ class projects::wednesdayagency {
     # ruby          => '1.9.3',
     source          => 'wednesdaylondon/wednesdayagency.com'
   }
+
+  host { 'wednesdayagency.com.host':
+    ip => '192.168.56.101',
+    host_aliases => 'www.wednesdayagency.com.host',
+  }
 }
