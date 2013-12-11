@@ -12,7 +12,7 @@ class people::nhekkens {
   #include utorrent
 
   # requires projects
-  #include projects::wednesday-sample
+  include projects::wednesday-sample
   #include projects::elder-statesman
   include projects::swarovskigroup
   include projects::jbrandjeans
