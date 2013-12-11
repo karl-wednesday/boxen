@@ -38,6 +38,8 @@ class people::karl_wednesday {
     'user.email': value => 'karl@wednesdayagency.com';
   }
 
+  include osx::dock::autohide
+
 #  osx_defaults { "require pass at screensaver":
 #    ensure => present,
 #    domain => 'com.apple.Finder',
