@@ -10,12 +10,18 @@ class projects::wednesday-sample {
 
   host { 'wednesday-sample.host':
     ip => '192.168.56.101',
-    host_aliases => 'wednesday-sample.host',
+    host_aliases => 'www.wednesday-sample.host',
   }
 
   file { "${project_dir}/dbv/config.php":
     ensure  => link,
     target  => "${project_dir}/config/dbv/config.php",
+    require => Repository[$project_dir]
+  }
+
+  file { "${project_dir}/wordpress/wp-config.php":
+    ensure  => link,
+    target  => "${project_dir}/build/public/wp-config.php",
     require => Repository[$project_dir]
   }
 }
