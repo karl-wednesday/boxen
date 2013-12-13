@@ -12,14 +12,14 @@ class wednesday::packages::mac {
 	# include nginx
 	# include nvm
 	include phantomjs
-	# include php
-	# include python
-	# include redis
+	include php
+	include python
+	include redis
 	include ruby
-	# include statsd
+	include statsd
 	include wget
 	#include wkhtmltopdf
-	# include zeromq
+	include zeromq
 
 	class { 'ruby::global':
 		version => '1.9.3'

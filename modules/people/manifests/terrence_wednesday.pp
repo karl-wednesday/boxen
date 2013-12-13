@@ -1,6 +1,8 @@
 class people::terrence_wednesday {
   #notify { 'Hello Terrence': }
 
+  #include osx::dock::autohide
+
   # requires classes
   include boxen::development
 
@@ -14,6 +16,7 @@ class people::terrence_wednesday {
   # requires projects
   include projects::wednesday-sample
   #include projects::elder-statesman
+  #include projects::erdem
   include projects::swarovskigroup
   include projects::jbrandjeans
   #include projects::lindex
@@ -23,13 +26,4 @@ class people::terrence_wednesday {
     'user.name': value => 'Terrence Cua';
     'user.email': value => 'terrence@wednesdayagency.com';
   }
-
-  #include osx::dock::autohide
-
-#  osx_defaults { "require pass at screensaver":
-#    ensure => present,
-#    domain => 'com.apple.Finder',
-#    key    => 'AppleShowAllFiles',
-#    value  => 1
-#  }
 }

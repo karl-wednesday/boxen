@@ -1,6 +1,8 @@
 class people::karl_wednesday {
   #notify { 'Hello Karl': }
 
+  include osx::dock::autohide
+
   # requires classes
   include boxen::development
 
@@ -9,11 +11,12 @@ class people::karl_wednesday {
   include ea_origin
   include forklift
   include steam
-  #include utorrent
+  include utorrent
 
   # requires projects
   include projects::wednesday-sample
   #include projects::elder-statesman
+  include projects::erdem
   include projects::jbrandjeans
   #include projects::lindex
   include projects::swarovskigroup
@@ -23,13 +26,4 @@ class people::karl_wednesday {
     'user.name': value => 'Karl Podger';
     'user.email': value => 'karl@wednesdayagency.com';
   }
-
-  include osx::dock::autohide
-
-#  osx_defaults { "require pass at screensaver":
-#    ensure => present,
-#    domain => 'com.apple.Finder',
-#    key    => 'AppleShowAllFiles',
-#    value  => 1
-#  }
 }

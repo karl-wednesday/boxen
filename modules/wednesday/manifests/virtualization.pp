@@ -4,9 +4,9 @@ class wednesday::virtualization::mac {
   $home = "/Users/${::boxen_user}"
   $vagrant_dir = "${boxen::config::srcdir}/vagrant"
 
-  vagrant::box { 'precise64/virtualbox':
-    source => 'http://files.vagrantup.com/precise64.box'
-  }
+  #vagrant::box { 'precise64/virtualbox':
+  #  source => 'http://files.vagrantup.com/precise64.box'
+  #}
 
   repository { $vagrant_dir:
     source => 'wednesdaylondon/vagrant'
