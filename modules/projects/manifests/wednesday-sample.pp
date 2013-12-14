@@ -1,6 +1,12 @@
 class projects::wednesday-sample {
 
-  $project_dir = "${boxen::config::srcdir}/sites/wednesday-sample/build"
+  include mysql
+  include php
+  #include php::5_4
+  #include php::5_4_11
+  include php::composer
+
+  $project_dir = "${boxen::config::srcdir}/sites/wednesday-sample"
 
   boxen::project { 'wednesday-sample':
     dir           => "${project_dir}",
@@ -19,9 +25,9 @@ class projects::wednesday-sample {
     require => Repository[$project_dir]
   }
 
-  file { "${project_dir}/wordpress/wp-config.php":
+  file { "${project_dir}/build/public/wp-config.php":
     ensure  => link,
-    target  => "${project_dir}/build/public/wp-config.php",
+    target  => "${project_dir}/config/wordpress/wp-config.php",
     require => Repository[$project_dir]
   }
 }

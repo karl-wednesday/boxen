@@ -4,15 +4,20 @@ class wednesday::packages::mac {
 	include automake
 	include foreman
 	include heroku
-	#include imagemagick
+	include imagemagick
 	include imageoptim
 	include libpng
-	include mongodb
-	include mysql
+	#include mongodb
+	#include mysql
 	# include nginx
 	# include nvm
+	include pcre
 	include phantomjs
-	include php
+	#include php
+	#include php::5_4
+	#include php::5_4_11
+	#include php::composer
+	include pkgconfig
 	include python
 	include redis
 	include ruby
