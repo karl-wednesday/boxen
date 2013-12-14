@@ -7,6 +7,8 @@ class wednesday::packages::mac {
 	include imagemagick
 	include imageoptim
 	include libpng
+	include memcached
+	#include memcached::lib
 	#include mongodb
 	#include mysql
 	# include nginx
