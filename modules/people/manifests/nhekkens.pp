@@ -16,7 +16,7 @@ class people::nhekkens {
   # requires projects
   include projects::wednesday-sample
   #include projects::elder-statesman
-  include projects::erdem
+  #include projects::erdem
   include projects::swarovskigroup
   include projects::jbrandjeans
   include projects::lindex

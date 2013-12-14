@@ -11,12 +11,12 @@ class people::karl_wednesday {
   include ea_origin
   include forklift
   include steam
-  include utorrent
+  #include utorrent
 
   # requires projects
   include projects::wednesday-sample
   #include projects::elder-statesman
-  include projects::erdem
+  #include projects::erdem
   include projects::jbrandjeans
   #include projects::lindex
   include projects::swarovskigroup
