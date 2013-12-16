@@ -20,14 +20,12 @@ class projects::wednesday-sample {
   }
 
   file { "${project_dir}/dbv/config.php":
-    ensure  => link,
-    target  => "${project_dir}/config/dbv/config.php",
+    source  => "${project_dir}/config/dbv/config.php",
     require => Repository[$project_dir]
   }
 
   file { "${project_dir}/build/public/wp-config.php":
-    ensure  => link,
-    target  => "${project_dir}/config/wordpress/wp-config.php",
+    source  => "${project_dir}/config/wordpress/wp-config.php",
     require => Repository[$project_dir]
   }
 }
