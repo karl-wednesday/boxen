@@ -15,11 +15,12 @@ class people::terrence_wednesday {
 
   # requires projects
   include projects::wednesday-sample
+  include projects::wisp-wednesday-sample
   #include projects::elder-statesman
   #include projects::erdem
-  include projects::swarovskigroup
   include projects::jbrandjeans
   #include projects::lindex
+  include projects::swarovskigroup
 
   # configure Git
   git::config::global {
