@@ -19,6 +19,10 @@ class projects::wednesday-sample {
     host_aliases => 'www.wednesday-sample.host',
   }
 
+  check_mode { "${project_dir}/build/public/wp-content":
+    mode => 777,
+  }
+
   file { "${project_dir}/dbv/config.php":
     source  => "${project_dir}/config/dbv/config.php",
     require => Repository[$project_dir]
