@@ -5,7 +5,7 @@ class wednesday::applications::mac {
 	include btsync
 	include caffeine
 	include ccleaner
-	include charles
+	#include charles
 	include chrome
 	include chrome::canary
 	include colloquy
