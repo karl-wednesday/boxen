@@ -6,7 +6,7 @@ class projects::wisp-wednesday-sample {
   #include php::5_4_11
   include php::composer
 
-  $project_dir = "${boxen::config::srcdir}/sites/wisp-wednesday-sample"
+  $project_dir = "${boxen::config::srcdir}/sites/wisp.wednesday-sample"
 
   boxen::project { 'wisp-wednesday-sample':
     dir           => "${project_dir}",
