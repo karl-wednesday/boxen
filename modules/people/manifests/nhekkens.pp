@@ -17,7 +17,7 @@ class people::nhekkens {
   include projects::wednesday-sample
   include projects::wisp-wednesday-sample
   #include projects::elder-statesman
-  #include projects::erdem
+  include projects::erdem
   #include projects::jbrandjeans
   include projects::lindex
   include projects::swarovskigroup
