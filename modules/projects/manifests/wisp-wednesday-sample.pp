@@ -17,14 +17,4 @@ class projects::wisp-wednesday-sample {
   host { 'wisp.wednesday-sample.host':
     ip => '192.168.56.101'
   }
-
-  file { "${project_dir}/dbv/config.php":
-    source  => "${project_dir}/config/dbv/config.php",
-    require => Repository[$project_dir]
-  }
-
-  file { "${project_dir}/build/public/wp-config.php":
-    source  => "${project_dir}/config/wordpress/wp-config.php",
-    require => Repository[$project_dir]
-  }
 }
