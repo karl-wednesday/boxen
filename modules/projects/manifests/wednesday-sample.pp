@@ -8,19 +8,33 @@ class projects::wednesday-sample {
 
   $project_dir = "${boxen::config::srcdir}/sites/wednesday-sample"
 
-  boxen::project { 'wednesday-sample':
+  boxen::project { "wednesday-sample":
     dir           => "${project_dir}",
     mysql         => true,
-    source        => 'karl-wednesday/wednesday-sample'
+    source        => "karl-wednesday/wednesday-sample"
   }
 
-  host { 'wednesday-sample.host':
-    ip => '192.168.56.101',
-    host_aliases => 'www.wednesday-sample.host',
+  host { "wednesday-sample.host":
+    ip => "192.168.56.101",
+    host_aliases => "www.wednesday-sample.host",
   }
 
-  check_mode { "${project_dir}/build/public/wp-content":
-    mode => 777,
+  host { "dbv.wednesday-sample.host":
+    ip => "192.168.56.101",
+    host_aliases => "dbv.wednesday-sample.host",
+  }
+
+  #check_mode { "${project_dir}/build/public/wp-content":
+  #  mode => 777
+  #}
+
+  file { "${project_dir}/sql/data":
+    ensure => directory,
+    recurse => true,
+    ignore => ".git",
+    #owner => $puppet::params::puppet_user,
+    #group => $puppet::params::puppet_group,
+    mode => 777
   }
 
   file { "${project_dir}/dbv/config.php":
