@@ -28,6 +28,15 @@ class projects::wednesday-sample {
   #  mode => 777
   #}
 
+  file { "${project_dir}/build/public/wp-content":
+    ensure => directory,
+    recurse => true,
+    ignore => ".git",
+    #owner => $puppet::params::puppet_user,
+    #group => $puppet::params::puppet_group,
+    mode => 777
+  }
+
   file { "${project_dir}/sql/data":
     ensure => directory,
     recurse => true,
