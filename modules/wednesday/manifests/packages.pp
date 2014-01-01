@@ -3,6 +3,7 @@ class wednesday::packages::mac {
 	include autoconf
 	include automake
 	include foreman
+	#include gource
 	include heroku
 	include imagemagick
 	include imageoptim
