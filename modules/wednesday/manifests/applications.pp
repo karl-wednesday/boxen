@@ -115,6 +115,10 @@ class wednesday::applications::mac {
 		source => 'wbond/sublime_alignment'
 	}
 
+	sublime_text_2::package { 'Handlebars':
+		source => 'daaain/Handlebars'
+	}
+
 	sublime_text_2::package { 'j​Query':
 		source => 'SublimeText/jQuery'
 	}
