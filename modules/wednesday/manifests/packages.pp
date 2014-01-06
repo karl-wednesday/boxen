@@ -5,6 +5,7 @@ class wednesday::packages::mac {
 	include foreman
 	#include gource
 	include heroku
+	include homebrew
 	include imagemagick
 	include imageoptim
 	include libpng
@@ -28,6 +29,7 @@ class wednesday::packages::mac {
 	include wget
 	#include wkhtmltopdf
 	include zeromq
+
 
 	class { 'ruby::global':
 		version => '1.9.3'
