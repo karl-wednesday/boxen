@@ -85,4 +85,20 @@ class wednesday::packages::mac {
 		version => '~> 0.12.2'
 	}
 
+
+#	class gource {
+#		#homebrew::tap { 'homebrew/versions': }
+#
+#		package {
+#			'gource':
+#		}
+#	}
+
+#	class ext4fuse {
+#		#homebrew::tap { 'homebrew/versions': }
+#
+#		package {
+#			'ext4fuse':
+#		}
+#	}
 }
