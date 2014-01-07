@@ -14,8 +14,8 @@ class people::karl_wednesday {
   #include utorrent
 
   # requires projects
-  #include projects::wednesday-sample
-  #include projects::wisp-wednesday-sample
+  include projects::wednesday-sample
+  include projects::wisp-wednesday-sample
   #include projects::elder-statesman
   #include projects::erdem
   include projects::jbrandjeans
