@@ -1,4 +1,5 @@
 class wednesday::environment {
+  include wednesday::users
   include wednesday::os::mac
   include wednesday::dotfiles::mac
   include wednesday::packages::mac
