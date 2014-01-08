@@ -79,10 +79,6 @@ class wednesday::applications::mac {
 		source => 'russCloak/SublimePuppet'
 	}
 
-	sublime_text_2::package { 'Ruby Tests':
-		source => 'maltize/sublime-text-2-ruby-tests'
-	}
-
 	sublime_text_2::package { 'SublimeCodeIntel':
 		source => 'SublimeCodeIntel/SublimeCodeIntel'
 	}
@@ -143,7 +139,11 @@ class wednesday::applications::mac {
 		source => 'aaronpowell/sublime-jquery-snippets'
 	}
 
-	sublime_text_2::package { 'Sublime Text 2 Ruby Tests':
+	sublime_text_2::package { 'RubyTest':
+		source => 'maltize/sublime-text-2-ruby-tests'
+	}
+
+	sublime_text_2::package { 'Ruby Tests': #install twice for the meantime in order to avoid error messages due to path issues
 		source => 'maltize/sublime-text-2-ruby-tests'
 	}
 
