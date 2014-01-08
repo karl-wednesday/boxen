@@ -14,13 +14,14 @@ class people::karl_wednesday {
   #include utorrent
 
   # requires projects
-  include projects::wednesday-sample
-  include projects::wisp-wednesday-sample
+  include projects::cookadlib 
   #include projects::elder-statesman
   #include projects::erdem
   include projects::jbrandjeans
   #include projects::lindex
   include projects::swarovskigroup
+  include projects::wednesday-sample
+  include projects::wisp-wednesday-sample
 
   # configure Git
   git::config::global {
