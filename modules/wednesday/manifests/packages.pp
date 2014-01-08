@@ -11,10 +11,10 @@ class wednesday::packages::mac {
 	include libpng
 	include memcached
 	#include memcached::lib
-	#include mongodb
-	#include mysql
-	# include nginx
-	# include nvm
+	include mongodb
+	include mysql
+	include nginx
+	#include nvm
 	include pcre
 	include phantomjs
 	include php
