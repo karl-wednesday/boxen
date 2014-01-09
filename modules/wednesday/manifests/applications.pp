@@ -30,6 +30,7 @@ class wednesday::applications::mac {
 	include skype
 	include spotify
 	include sublime_text_2
+	include teamviewer
 	include textwrangler
 	include upshot
 	include vagrant
