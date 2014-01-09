@@ -13,3 +13,4 @@
 
 #Added by Wednesday on 2013-09-02
 Puppetfile.lock
+/vendor/cache/*
