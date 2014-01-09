@@ -32,11 +32,11 @@ class wednesday::packages::mac {
 
 
 	class { 'ruby::global':
-		version => '1.9.3'
+		version => '2.0.0'
 	}
 
 	class { 'nodejs::global':
-		version => 'v0.10.3'
+		version => 'v0.10.21'
 	}
 
 	package { 'casperjs':
@@ -73,32 +73,31 @@ class wednesday::packages::mac {
 		node_version => 'v0.10.3'
 	}
 
-	ruby::gem { 'sass for 1.9.3-p448':
+	ruby::gem { 'sass for 2.0.0':
 		gem     => 'sass',
-		ruby    => '1.9.3-p448',
-		version => '~> 3.2.10'
+		ruby    => '2.0.0',
+		version => '~> 3.2.13'
 	}
 
-	ruby::gem { 'compass for 1.9.3-p448':
+	ruby::gem { 'compass for 2.0.0':
 		gem     => 'compass',
-		ruby    => '1.9.3-p448',
+		ruby    => '2.0.0',
 		version => '~> 0.12.2'
 	}
 
+	# class gource {
+	# 	# homebrew::tap { 'homebrew/versions': }
 
-#	class gource {
-#		#homebrew::tap { 'homebrew/versions': }
-#
-#		package {
-#			'gource':
-#		}
-#	}
+	# 	package {
+	# 		'gource':
+	# 	}
+	# }
 
-#	class ext4fuse {
-#		#homebrew::tap { 'homebrew/versions': }
-#
-#		package {
-#			'ext4fuse':
-#		}
-#	}
+	# class ext4fuse {
+	# 	#homebrew::tap { 'homebrew/versions': }
+
+	# 	package {
+	# 		'ext4fuse':
+	# 	}
+	# }
 }
