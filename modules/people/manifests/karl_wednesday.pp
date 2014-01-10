@@ -8,16 +8,15 @@ class people::karl_wednesday {
 
   # requires modules in Puppetfile
   include bbedit
-  include ea_origin
   include forklift
-  include steam
+  include wednesday::games::mac
   #include utorrent
 
   # requires projects
   include projects::cookadlib 
   #include projects::elder-statesman
   #include projects::erdem
-  include projects::jbrandjeans
+  #include projects::jbrandjeans
   #include projects::lindex
   include projects::swarovskigroup
   include projects::wednesday-sample
