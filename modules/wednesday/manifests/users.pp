@@ -5,6 +5,7 @@ class wednesday::users {
 
   user { 'www-data':
     ensure               => 'present',
-    gid					 => 'www-data'
+    gid					 => 'www-data',
+    uid					 => '1000' #hide on login screen
   }
 }
