@@ -80,4 +80,26 @@ class projects::wednesday-sample {
     ]
   }
 
+  file { "${project_dir}/build/public/wp-content/uploads":
+    ensure => directory,
+    mode => '755',
+    require => [
+      Repository[$project_dir]
+    ]
+  }
+
+  file { "${project_dir}/build/sync.sh":
+    ensure => file,
+    source  => "${project_dir}/config/s3cmd/sync.sh",
+    mode => '+x',
+    require => [
+      Repository[$project_dir]
+    ]
+  }
+
+  exec { "/bin/bash ./sync.sh":
+    cwd     => "${project_dir}/build",
+    onlyif => ["/bin/test -fx ${project_dir}/build/sync.sh", "/bin/test -d ${project_dir}/build/public/wp-content/uploads"]
+  }
+
 }
