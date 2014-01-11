@@ -2,36 +2,45 @@ class wednesday::packages::mac {
 	include pkgconfig
 	include autoconf
 	include automake
+	include csshx
 	include foreman
-	#include gource
+	include gh
+	# include gource
 	include heroku
 	include homebrew
 	include imagemagick
 	include imageoptim
+	include java
 	include libpng
 	include memcached
-	#include memcached::lib
+	# include memcached::lib
 	include mongodb
 	include mysql
 	# include nodejs::v0_10_1
 	include nginx
-	#include ntfs_3g
-	#include nvm
-	#include osxfuse
+	# include ntfs_3g
+	# include nvm
+	# include osxfuse
 	include pcre
 	include phantomjs
 	include php
-	#include php::5_4
-	#include php::5_4_11
+	# include php::5_4
+	# include php::5_4_11
 	include php::composer
 	include pkgconfig
 	include python
 	include redis
 	include ruby
 	include statsd
+	# include vim
 	include wget
-	#include wkhtmltopdf
+	# include wkhtmltopdf
 	include zeromq
+
+	vim::bundle { [
+	  'scrooloose/syntastic',
+	  'sjl/gundo.vim'
+	]: }
 
 	class { 'nodejs::global':
 		version => 'v0.10.21'
@@ -45,8 +54,14 @@ class wednesday::packages::mac {
 		install_options => ['--devel']
 	}
 
+	package { 'gpg':
+	}
+
 	# package { 'phantomjs':
 	# }
+
+	package { 's3cmd':
+	}
 
 	package { 'slimerjs':
 	}
