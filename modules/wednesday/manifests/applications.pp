@@ -8,6 +8,7 @@ class wednesday::applications::mac {
 	#include charles
 	include chrome
 	include chrome::canary
+	include clipmenu
 	include colloquy
 	include cyberduck
 	include dropbox
@@ -20,9 +21,11 @@ class wednesday::applications::mac {
 	include harvest
 	include iterm2::stable
 	include induction
+	include macvim
 	include opera
 	include tower
 	include transmit
+	include transmission
 	include screenhero
 	include sequel_pro
 	include spectacle
@@ -37,6 +40,8 @@ class wednesday::applications::mac {
 	#include vim
 	include virtualbox
 	include vlc
+	include wedge
+	include vmware_fusion
 
 	#class {'charles::license':
 	#  license_name => 'Your name',
@@ -146,6 +151,10 @@ class wednesday::applications::mac {
 
 	sublime_text_2::package { 'Ruby Tests': #install twice for the meantime in order to avoid error messages due to path issues
 		source => 'maltize/sublime-text-2-ruby-tests'
+	}
+
+	sublime_text_2::package { 'Puppet Syntax':
+		source => 'Stubbs/sublime-puppet-syntax'
 	}
 
 	# file { "/Users/$luser/Library/Application Support/Sublime Text 2/Packages/User/JSLint.sublime-build":
