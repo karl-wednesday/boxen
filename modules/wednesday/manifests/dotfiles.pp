@@ -31,4 +31,10 @@ class wednesday::dotfiles::mac {
     target  => "${dotfiles_dir}/.vimrc",
     require => Repository[$dotfiles_dir]
   }
+
+  file { "${home}/.s3cfg":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.s3cfg",
+    require => Repository[$dotfiles_dir]
+  }
 }
