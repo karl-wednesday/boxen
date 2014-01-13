@@ -1,7 +1,7 @@
 class projects::erdem {
 
   boxen::project { 'erdem':
-    dir           => "${boxen::config::srcdir}/sites/erdem.com/deploy",
+    dir           => "${boxen::config::srcdir}/sites/erdem.com/build",
     mysql         => true,
     source        => 'wednesdaylondon/erdem.com'
   }
