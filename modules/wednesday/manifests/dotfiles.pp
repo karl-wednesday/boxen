@@ -20,6 +20,18 @@ class wednesday::dotfiles::mac {
     require => Repository[$dotfiles_dir]
   }
 
+  file { "${home}/.ssh/id_rsa":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.ssh/id_rsa",
+    require => Repository[$dotfiles_dir]
+  }
+
+  file { "${home}/.ssh/id_rsa.pub":
+    ensure  => link,
+    target  => "${dotfiles_dir}/.ssh/id_rsa.pub",
+    require => Repository[$dotfiles_dir]
+  }
+
   file { "${home}/.ssh/config":
     ensure  => link,
     target  => "${dotfiles_dir}/.ssh/config",
