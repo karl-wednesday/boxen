@@ -15,7 +15,7 @@ class people::karl_wednesday {
   # requires projects
   include projects::cookadlib 
   #include projects::elder-statesman
-  #include projects::erdem
+  include projects::erdem
   #include projects::jbrandjeans
   #include projects::lindex
   include projects::swarovskigroup
