@@ -1,9 +1,9 @@
 class projects::erdem {
 
   boxen::project { 'erdem':
-    dir           => "${boxen::config::srcdir}/sites/erdem.com/build",
+    dir           => "${boxen::config::srcdir}/sites/erdem.com",
     mysql         => true,
-    source        => 'wednesdaylondon/erdem.com'
+    source        => 'wednesdaylondon/erdem-responsive'
   }
 
   host { 'erdem.com.host':
