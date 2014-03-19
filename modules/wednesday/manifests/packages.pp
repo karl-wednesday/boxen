@@ -46,9 +46,9 @@ class wednesday::packages::mac {
 		version => 'v0.10.21'
 	}
 
-	class { 'ruby::global':
-		version => '2.0.0'
-	}
+	# class { 'ruby::global':
+	# 	version => '2.0.0'
+	# }
 
 	package { 'casperjs':
 		install_options => ['--devel']
