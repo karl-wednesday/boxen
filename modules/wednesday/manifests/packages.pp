@@ -104,13 +104,13 @@ class wednesday::packages::mac {
 	ruby::gem { 'compass for 2.0.0':
 		gem     => 'compass',
 		ruby    => '2.0.0',
-		version => '~> 0.12.2'
+		version => '~> 0.12.3'
 	}
 
 	ruby::gem { 'sass for 2.0.0':
 		gem     => 'sass',
 		ruby    => '2.0.0',
-		version => '~> 3.2.13'
+		version => '~> 3.3'
 	}
 
 	# class gource {
