@@ -137,6 +137,10 @@ class wednesday::applications::mac {
 		source => 'nathos/sass-textmate-bundle'
 	}
 
+	sublime_text_2::package { 'Grunt':
+		source => 'tvooo/sublime-grunt'
+	}
+
 	sublime_text_2::package { 'ColorPicker':
 		source => 'weslly/ColorPicker'
 	}
@@ -145,13 +149,13 @@ class wednesday::applications::mac {
 		source => 'aaronpowell/sublime-jquery-snippets'
 	}
 
-	sublime_text_2::package { 'RubyTest':
-		source => 'maltize/sublime-text-2-ruby-tests'
-	}
+	# sublime_text_2::package { 'RubyTest':
+	# 	source => 'maltize/sublime-text-2-ruby-tests'
+	# }
 
-	sublime_text_2::package { 'Ruby Tests': #install twice for the meantime in order to avoid error messages due to path issues
-		source => 'maltize/sublime-text-2-ruby-tests'
-	}
+	# sublime_text_2::package { 'Ruby Tests': #install twice for the meantime in order to avoid error messages due to path issues
+	# 	source => 'maltize/sublime-text-2-ruby-tests'
+	# }
 
 	sublime_text_2::package { 'Puppet Syntax':
 		source => 'Stubbs/sublime-puppet-syntax'
