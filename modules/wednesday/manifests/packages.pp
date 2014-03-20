@@ -104,7 +104,8 @@ class wednesday::packages::mac {
 	ruby::gem { 'compass for 2.0.0':
 		gem     => 'compass',
 		ruby    => '2.0.0',
-		version => '~> 0.12.3'
+		#version => '~> 0.12.3'
+		version => '~> 1.0.0.alpha.19'
 	}
 
 	ruby::gem { 'sass for 2.0.0':
