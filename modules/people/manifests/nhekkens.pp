@@ -9,7 +9,7 @@ class people::nhekkens {
   # requires modules in Puppetfile
   #include bbedit
   #include forklift
-  include wednesday::games::mac
+  #include wednesday::games::mac
   #include utorrent
 
   # requires projects
