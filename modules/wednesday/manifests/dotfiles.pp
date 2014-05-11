@@ -49,4 +49,11 @@ class wednesday::dotfiles::mac {
     target  => "${dotfiles_dir}/.s3cfg",
     require => Repository[$dotfiles_dir]
   }
+
+  file { "${home}/Library/Application Support/Sublime Text 2/Packages/SublimeGrunt.sublime-settings":
+    ensure  => link,
+    target  => "${dotfiles_dir}/applications/Sublime Text 2/Packages/SublimeGrunt.sublime-settings",
+    require => Repository[$dotfiles_dir],
+    # source  => "${home}/Library/Application Support/Sublime Text 2/Packages/SublimeGrunt.sublime-settings"
+  }  
 }
