@@ -18,8 +18,8 @@ class people::nhekkens {
   include projects::erdem
   #include projects::jbrandjeans
   #include projects::lindex
-  include projects::old-erdem
-  include projects::swarovskigroup
+  # include projects::old-erdem
+  # include projects::swarovskigroup
   #include projects::wednesday-sample
   #include projects::wisp-wednesday-sample
 
@@ -28,4 +28,15 @@ class people::nhekkens {
     'user.name': value => 'Nicolay Hekkens';
     'user.email': value => 'nicolay@wednesdayagency.com';
   }
+
+#
+    # Remove services we don't want
+    #
+    service {"dev.nginx":
+        ensure => "stopped",
+    }
+   
+    service {"dev.dnsmasq":
+        ensure => "stopped",
+    }
 }
