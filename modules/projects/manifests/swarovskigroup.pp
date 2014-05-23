@@ -26,7 +26,7 @@ class projects::swarovskigroup {
 	# exec { "npm update":
 		cwd     => "${project_dir}",
 		# path    => ["/opt/boxen/nodenv/shims"],
-		onlyif => ["/bin/test -d ${project_dir}", "/bin/test -d ${project_dir}"]
+		onlyif => ["/bin/test -d ${project_dir}", "/bin/test -d ${project_dir}/node_modules"]
 	}
 
 	exec { "/opt/boxen/nodenv/shims/bower install":
