@@ -3,7 +3,7 @@ class projects::kentandcurwen {
   boxen::project { 'kentandcurwen':
     dir           => "${boxen::config::srcdir}/sites/kentandcurwen.com/deploy",
     mysql         => true,
-    source        => 'wednesdaylondon/kentandcurwen'
+    source        => 'wednesdaylondon/kentcurwen'
   }
 
   host { 'kentandcurwen.com.host':
