@@ -14,7 +14,10 @@ class projects::cookadlib {
 
   boxen::project { "cookadlib":
     dir           => "${project_dir}",
+    mongodb       => true,
     mysql         => true,
+    phantomjs     => false,
+    redis         => true,
     source        => "cookadlib/cookadlib.com"
   }
 

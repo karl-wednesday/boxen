@@ -16,7 +16,7 @@ class projects::wednesday-sample {
 
   boxen::project { "wednesday-sample":
     dir           => "${project_dir}",
-    nginx         => true,
+    nginx         => false,
     mysql         => true,
     source        => "karl-wednesday/wednesday-sample"
   }

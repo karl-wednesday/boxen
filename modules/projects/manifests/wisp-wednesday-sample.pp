@@ -4,7 +4,8 @@ class projects::wisp-wednesday-sample {
 
   boxen::project { 'wisp-wednesday-sample':
     dir           => "${project_dir}",
-    mysql         => true,
+    mysql         => false,
+    nginx         => false,
     source        => 'karl-wednesday/wisp.wednesday-sample'
   }
 

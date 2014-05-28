@@ -2,7 +2,8 @@ class projects::old-erdem {
 
   boxen::project { 'old-erdem':
     dir           => "${boxen::config::srcdir}/sites/old.erdem.com",
-    mysql         => true,
+    mysql         => false,
+    nginx         => false,
     source        => 'wednesdaylondon/erdem.com'
   }
 

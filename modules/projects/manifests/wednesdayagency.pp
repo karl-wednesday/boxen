@@ -5,7 +5,7 @@ class projects::wednesdayagency {
     # dotenv        => true,
     # elasticsearch => true,
     mysql           => true,
-    # nginx         => true,
+    nginx         => false,
     # redis         => true,
     # ruby          => '1.9.3',
     source          => 'wednesdaylondon/wednesdayagency.com'

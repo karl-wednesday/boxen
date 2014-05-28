@@ -2,9 +2,9 @@ class projects::jbrandjeans {
 
   boxen::project { 'jbrandjeans':
     dir           => "${boxen::config::srcdir}/sites/jbrandjeans.com/build",
-    mysql         => true,
-    redis         => true,
-    nginx         => true,
+    mysql         => false,
+    redis         => false,
+    nginx         => false,
     source        => 'wednesdaylondon/jbrandjeans.com'
   }
 

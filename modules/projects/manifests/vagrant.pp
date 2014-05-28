@@ -4,6 +4,8 @@ class projects::vagrant {
 
   boxen::project { "vagrant":
     dir           => "${sites_dir}",
+    mysql         => false,
+    nginx         => false
   }
 
   file { "${sites_dir}":

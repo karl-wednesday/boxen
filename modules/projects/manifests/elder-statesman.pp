@@ -2,7 +2,8 @@ class projects::elder-statesman {
 
   boxen::project { 'elder-statesman':
     dir           => "${boxen::config::srcdir}/sites/elder-statesman.com/deploy",
-    mysql         => true,
+    mysql         => false,
+    nginx         => false,
     source        => 'wednesdaylondon/elder-statesman.com'
   }
 
