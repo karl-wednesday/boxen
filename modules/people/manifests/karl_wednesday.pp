@@ -17,8 +17,9 @@ class people::karl_wednesday {
   #include projects::elder-statesman
   include projects::erdem
   #include projects::jbrandjeans
+  include projects::kentandcurwen
   #include projects::lindex
-  include projects::old-erdem
+  # include projects::old-erdem
   include projects::swarovskigroup
   include projects::wednesday-sample
   include projects::wisp-wednesday-sample
