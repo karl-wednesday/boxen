@@ -7,13 +7,13 @@ class people::karl_wednesday {
     'user.email': value => 'karl@wednesdayagency.com';
   }
 
-  service {"dev.nginx":
-    ensure => "stopped",
-  }
+  # service {"dev.nginx":
+  #   ensure => "stopped",
+  # }
 
-  service {"dev.dnsmasq":
-    ensure => "stopped",
-  }
+  # service {"dev.dnsmasq":
+  #   ensure => "stopped",
+  # }
 
   include osx::dock::autohide
 

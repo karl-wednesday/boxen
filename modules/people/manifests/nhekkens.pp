@@ -7,13 +7,13 @@ class people::nhekkens {
     'user.email': value => 'nicolay@wednesdayagency.com';
   }
 
-  service {"dev.nginx":
-    ensure => "stopped",
-  }
+  # service {"dev.nginx":
+  #   ensure => "stopped",
+  # }
 
-  service {"dev.dnsmasq":
-    ensure => "stopped",
-  }
+  # service {"dev.dnsmasq":
+  #   ensure => "stopped",
+  # }
 
   #include osx::dock::autohide
 
