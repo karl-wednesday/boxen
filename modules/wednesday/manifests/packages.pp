@@ -101,17 +101,33 @@ class wednesday::packages::mac {
 		node_version => 'v0.10.21'
 	}
 
-	ruby::gem { 'compass for 2.0.0':
-		gem     => 'compass',
-		ruby    => '2.0.0',
-		#version => '~> 0.12.3'
-		version => '~> 1.0.0.alpha.19'
+	# ensure a gem is installed for a certain ruby version
+	# note, you can't have duplicate resource names so you have to name like so
+	$version = '2.0.0'
+	ruby_gem { "bundler for ${version}":
+		gem          => 'bundler',
+		version      => '~> 1.2.0',
+		ruby_version => $version
 	}
 
-	ruby::gem { 'sass for 2.0.0':
-		gem     => 'sass',
-		ruby    => '2.0.0',
-		version => '~> 3.3'
+	# ensure a gem is installed for all ruby versions
+	ruby_gem { 'bundler for all rubies':
+		gem          => 'bundler',
+		version      => '~> 1.0',
+		ruby_version => '*'
+	}
+
+	ruby_gem { 'compass for 2.0.0':
+		gem          => 'compass',
+		ruby_version => $version,
+		#version => '~> 0.12.3'
+		version      => '~> 1.0.0.alpha.19'
+	}
+
+	ruby_gem { 'sass for 2.0.0':
+		gem          => 'sass',
+		ruby_version => $version,
+		version      => '~> 3.3'
 	}
 
 	# class gource {
