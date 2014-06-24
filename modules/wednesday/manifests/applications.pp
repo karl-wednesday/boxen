@@ -1,37 +1,37 @@
 class wednesday::applications::mac {
-	include alfred
-	include arq
+	#include alfred
+	#include arq
 	include brow
-	include btsync
+	#include btsync
 	include caffeine
 	include ccleaner
 	#include charles
 	include chrome
 	include chrome::canary
 	include clipmenu
-	include colloquy
-	include cyberduck
+	#include colloquy
+	#include cyberduck
 	include dropbox
 	include evernote
 	include firefox
 	include flux
 	include googledrive
-	include googleearth
-	include handbrake
-	include harvest
-	include iterm2::stable
+	#include googleearth
+	#include handbrake
+	#include harvest
+	#include iterm2::stable
 	include induction
 	include macvim
-	include opera
+	#include opera
 	include tower
 	include transmit
 	include transmission
 	include screenhero
 	include sequel_pro
 	include spectacle
-	include skitch
+	#include skitch
 	include skype
-	include spotify
+	#include spotify
 	include sublime_text_2
 	include teamviewer
 	include textwrangler
