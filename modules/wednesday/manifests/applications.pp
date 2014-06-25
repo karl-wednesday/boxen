@@ -1,47 +1,48 @@
 class wednesday::applications::mac {
-	include alfred
-	include arq
-	include brow
-	include btsync
-	include caffeine
-	include ccleaner
+	#include alfred
+	#include arq
+	#include brow
+	#include btsync
+	#include caffeine
+	#include ccleaner
 	#include charles
 	include chrome
 	include chrome::canary
-	include clipmenu
-	include colloquy
-	include cyberduck
+	#include clipmenu
+	#include colloquy
+	#include cyberduck
+	#include docker
 	include dropbox
-	include evernote
+	#include evernote
 	include firefox
-	include flux
+	#include flux
 	include googledrive
-	include googleearth
+	#include googleearth
 	include handbrake
-	include harvest
-	include iterm2::stable
-	include induction
-	include macvim
-	include opera
+	#include harvest
+	#include iterm2::stable
+	#include induction
+	#include macvim
+	#include opera
 	include tower
 	include transmit
-	include transmission
-	include screenhero
+	#include transmission
+	#include screenhero
 	include sequel_pro
-	include spectacle
-	include skitch
-	include skype
-	include spotify
+	#include spectacle
+	#include skitch
+	#include skype
+	#include spotify
 	include sublime_text_2
-	include teamviewer
+	#include teamviewer
 	include textwrangler
-	include upshot
-	include vagrant
+	#include upshot
+	#include vagrant
 	#include vim
-	include virtualbox
-	include vlc
-	include wedge
-	include vmware_fusion
+	#include virtualbox
+	#include vlc
+	#include wedge
+	#include vmware_fusion
 
 	#class {'charles::license':
 	#  license_name => 'Your name',

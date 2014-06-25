@@ -1,10 +1,10 @@
-class people::nhekkens {
-  #notify { 'Hello Nicolay': }
+class people::jegardiner {
+  #notify { 'Hello James': }
 
   # configure Git
   git::config::global {
-    'user.name': value => 'Nicolay Hekkens';
-    'user.email': value => 'nicolay@wednesdayagency.com';
+    'user.name': value => 'James Gardiner';
+    'user.email': value => 'jamesg@wednesdayagency.com';
   }
 
   service {"dev.nginx":
@@ -29,8 +29,10 @@ class people::nhekkens {
   # requires projects
   # include projects::redacted
   # include projects::elder-statesman
-  # include projects::erdem
+  include projects::erdem
+  include projects::frame-denim
   # include projects::jbrandjeans
+  include projects::kentandcurwen
   # include projects::lindex
   # include projects::old-erdem
   # include projects::swarovskigroup

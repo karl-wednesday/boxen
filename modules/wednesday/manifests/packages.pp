@@ -3,10 +3,10 @@ class wednesday::packages::mac {
 	include autoconf
 	include automake
 	include csshx
-	include foreman
+	#include foreman
 	include gh
 	# include gource
-	include heroku
+	#include heroku
 	include homebrew
 	include imagemagick
 	include imageoptim
@@ -17,7 +17,7 @@ class wednesday::packages::mac {
 	include mongodb
 	include mysql
 	# include nodejs::v0_10_1
-	include nginx
+	#include nginx
 	# include ntfs_3g
 	# include nvm
 	# include osxfuse
@@ -31,11 +31,11 @@ class wednesday::packages::mac {
 	include python
 	include redis
 	include ruby
-	include statsd
+	#include statsd
 	# include vim
 	include wget
 	# include wkhtmltopdf
-	include zeromq
+	#include zeromq
 
 	vim::bundle { [
 	  'scrooloose/syntastic',
@@ -76,25 +76,25 @@ class wednesday::packages::mac {
 		node_version => 'v0.10.21'
 	}
 
-	nodejs::module { 'less':
-		module  => 'less',
-		node_version => 'v0.10.21'
-	}
+	# nodejs::module { 'less':
+	# 	module  => 'less',
+	# 	node_version => 'v0.10.21'
+	# }
 
 	nodejs::module { 'jshint':
 		module  => 'jshint',
 		node_version => 'v0.10.21'
 	}
 
-	nodejs::module { 'recess':
-		module  => 'recess',
-		node_version => 'v0.10.21'
-	}
+	# nodejs::module { 'recess':
+	# 	module  => 'recess',
+	# 	node_version => 'v0.10.21'
+	# }
 
-	nodejs::module { 'sails':
-		module  => 'sails',
-		node_version => 'v0.10.21'
-	}
+	# nodejs::module { 'sails':
+	# 	module  => 'sails',
+	# 	node_version => 'v0.10.21'
+	# }
 
 	nodejs::module { 'yo':
 		module  => 'yo',
