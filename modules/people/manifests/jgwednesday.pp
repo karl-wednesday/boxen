@@ -1,4 +1,4 @@
-class people::jegardiner {
+class people::jgwednesday {
   #notify { 'Hello James': }
 
   # configure Git
