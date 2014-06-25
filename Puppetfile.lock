@@ -459,6 +459,11 @@ GITHUBTARBALL
     zeromq (1.0.0)
 
 GITHUBTARBALL
+  remote: morgante/puppet-docker
+  specs:
+    docker (1.0.3)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.3)
@@ -502,6 +507,7 @@ DEPENDENCIES
   csshx (= 1.0.0)
   cyberduck (= 1.0.1)
   dnsmasq (= 1.0.1)
+  docker (= 1.0.3)
   dropbox (= 1.2.0)
   ea_origin (= 0.5.0)
   eclipse (= 2.2.0)
