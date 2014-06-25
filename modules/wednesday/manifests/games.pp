@@ -8,8 +8,8 @@ class wednesday::games::mac {
 	# package { 'dosbox':
 	# }
 
-	package { 'scummvm':
-	}
+	#package { 'scummvm':
+	#}
 
 	# package { 'wesnoth':
 	# }
