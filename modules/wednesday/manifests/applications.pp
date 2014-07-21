@@ -1,6 +1,7 @@
 class wednesday::applications::mac {
 	#include alfred
 	#include arq
+	include atom
 	#include brow
 	#include btsync
 	#include caffeine
@@ -129,7 +130,7 @@ class wednesday::applications::mac {
 	sublime_text_2::package { 'Prefixr':
 		source => 'wbond/sublime_prefixr'
 	}
-	
+
 	sublime_text_2::package { 'JsFormat':
 		source => 'jdc0589/JsFormat'
 	}
