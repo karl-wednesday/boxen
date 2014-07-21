@@ -3,7 +3,8 @@ require homebrew
 require gcc
 
 Exec {
-  group       => 'staff',
+  #group       => 'staff',
+  group       => "${groups $(whoami) | cut -d' ' -f1}",
   logoutput   => on_failure,
   user        => $boxen_user,
 
@@ -25,7 +26,8 @@ Exec {
 }
 
 File {
-  group => 'staff',
+  #group => 'staff',
+  group => "${groups $(whoami) | cut -d' ' -f1}",
   owner => $boxen_user
 }
 
