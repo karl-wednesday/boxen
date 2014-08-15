@@ -466,7 +466,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
-    inifile (1.0.3)
+    inifile (1.1.1)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-stdlib
@@ -476,7 +476,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: ripienaar/puppet-module-data
   specs:
-    module-data (0.0.3)
+    module_data (0.0.3)
 
 GITHUBTARBALL
   remote: singuerinc/puppet-forklift
@@ -537,7 +537,7 @@ DEPENDENCIES
   imagemagick (= 1.2.1)
   imageoptim (= 0.0.2)
   induction (= 1.0.0)
-  inifile (= 1.0.3)
+  inifile (= 1.1.1)
   iterm2 (= 1.0.4)
   java (= 1.2.0)
   league_of_legends (= 1.1.2)
@@ -545,7 +545,7 @@ DEPENDENCIES
   libtool (= 1.0.0)
   macvim (= 1.0.0)
   memcached (= 1.2.0)
-  module-data (= 0.0.3)
+  module_data (= 0.0.3)
   mongodb (= 1.2.0)
   mysql (= 1.99.15)
   nginx (= 1.4.3)
