@@ -29,10 +29,10 @@ class people::jgwednesday {
   # requires projects
   # include projects::redacted
   # include projects::elder-statesman
-  include projects::erdem
-  include projects::frame-denim
+  # include projects::erdem
+  # include projects::frame-denim
   # include projects::jbrandjeans
-  include projects::kentandcurwen
+  # include projects::kentandcurwen
   # include projects::lindex
   # include projects::old-erdem
   # include projects::swarovskigroup
