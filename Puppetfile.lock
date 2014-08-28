@@ -131,12 +131,12 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-gcc
   specs:
-    gcc (2.1.1)
+    gcc (2.0.101)
 
 GITHUBTARBALL
   remote: boxen/puppet-gh
   specs:
-    gh (1.8.0)
+    gh (2.0.0)
 
 GITHUBTARBALL
   remote: boxen/puppet-git
@@ -296,7 +296,7 @@ GITHUBTARBALL
 GITHUBTARBALL
   remote: boxen/puppet-php
   specs:
-    php (1.1.4)
+    php (1.2.4)
 
 GITHUBTARBALL
   remote: boxen/puppet-pkgconfig
@@ -522,8 +522,8 @@ DEPENDENCIES
   flux (= 1.0.0)
   foreman (= 1.2.0)
   forklift (= 1.0.7)
-  gcc (= 2.1.1)
-  gh (= 1.8.0)
+  gcc (= 2.0.101)
+  gh (= 2.0.0)
   git (= 2.5.0)
   github_for_mac (= 1.0.1)
   go (= 1.1.0)
@@ -558,7 +558,7 @@ DEPENDENCIES
   osxfuse (= 1.1.0)
   pcre (= 1.0.0)
   phantomjs (= 2.3.0)
-  php (= 1.1.4)
+  php (= 1.2.4)
   pkgconfig (= 1.0.0)
   pkgconfig (= 1.0.0)
   postgresql (= 2.2.2)
