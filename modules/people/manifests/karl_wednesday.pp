@@ -58,15 +58,16 @@ class people::karl_wednesday {
   #include wednesday::games::mac
 
   # requires projects
-  include projects::cookadlib 
+  include projects::cookadlib
   # include projects::elder-statesman
   include projects::erdem
   include projects::frame-denim
   # include projects::jbrandjeans
-  include projects::kentandcurwen
+  # include projects::kentandcurwen
   # include projects::lindex
-  # include projects::old-erdem
-  include projects::swarovskigroup
+  include projects::mulberry-cara
+  # include projects::swarovskigroup
+  include projects::wednesdayagency
   include projects::wednesday-sample
   include projects::wisp-wednesday-sample
 }
