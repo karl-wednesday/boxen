@@ -4,7 +4,7 @@ class projects::wednesdayagency {
     dir             => "${boxen::config::srcdir}/sites/wednesdayagency.com/deploy",
     # dotenv        => true,
     # elasticsearch => true,
-    mysql           => true,
+    mysql           => false,
     nginx           => false,
     # redis         => true,
     # ruby          => '1.9.3',
