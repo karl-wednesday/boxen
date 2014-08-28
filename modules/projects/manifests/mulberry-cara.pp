@@ -1,6 +1,6 @@
 class projects::mulberry {
 
-  boxen::project { 'mulberry':
+  boxen::project { 'mulberry-cara':
     dir           => "${boxen::config::srcdir}/sites/mulberry-cara/deploy",
     mysql         => false,
     nginx         => false,
