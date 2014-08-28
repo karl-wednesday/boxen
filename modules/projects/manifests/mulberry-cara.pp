@@ -1,4 +1,4 @@
-class projects::mulberry {
+class projects::mulberry-cara {
 
   boxen::project { 'mulberry-cara':
     dir           => "${boxen::config::srcdir}/sites/mulberry-cara/deploy",
