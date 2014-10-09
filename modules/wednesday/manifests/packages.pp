@@ -43,7 +43,7 @@ class wednesday::packages::mac {
 	]: }
 
 	class { 'nodejs::global':
-		version => 'v0.10.21'
+		version => 'v0.11.13'
 	}
 
 	# class { 'ruby::global':
@@ -68,37 +68,37 @@ class wednesday::packages::mac {
 
 	nodejs::module { 'bower':
 		module  => 'bower',
-		node_version => 'v0.10.21'
+		node_version => 'v0.11.13'
 	}
 
 	nodejs::module { 'grunt-cli':
 		module  => 'grunt-cli',
-		node_version => 'v0.10.21'
+		node_version => 'v0.11.13'
 	}
 
 	# nodejs::module { 'less':
 	# 	module  => 'less',
-	# 	node_version => 'v0.10.21'
+	# 	node_version => 'v0.11.13'
 	# }
 
 	nodejs::module { 'jshint':
 		module  => 'jshint',
-		node_version => 'v0.10.21'
+		node_version => 'v0.11.13'
 	}
 
 	# nodejs::module { 'recess':
 	# 	module  => 'recess',
-	# 	node_version => 'v0.10.21'
+	# 	node_version => 'v0.11.13'
 	# }
 
 	# nodejs::module { 'sails':
 	# 	module  => 'sails',
-	# 	node_version => 'v0.10.21'
+	# 	node_version => 'v0.11.13'
 	# }
 
 	nodejs::module { 'yo':
 		module  => 'yo',
-		node_version => 'v0.10.21'
+		node_version => 'v0.11.13'
 	}
 
 	# ensure a gem is installed for a certain ruby version
